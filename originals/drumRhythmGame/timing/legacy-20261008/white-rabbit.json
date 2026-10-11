@@ -1,0 +1,46 @@
+{
+  "format": "drumgame-chart/1",
+  "meta": {
+    "title": "小白兔白又白",
+    "bpm": 120,
+    "beatsPerBar": 4,
+    "stepsPerBar": 16,
+    "audioOffsetMs": 0,
+    "audioFile": "audio/white-rabbit.mp3"
+  },
+  "lanes": [
+    {
+      "id": 0,
+      "name": "闭镲 CHH",
+      "key": "S1",
+      "gm": 42,
+      "color": "#74e0b8",
+      "shape": "circle"
+    },
+    {
+      "id": 1,
+      "name": "开镲 OHH",
+      "key": "S2",
+      "gm": 46,
+      "color": "#7cc5ff",
+      "shape": "triangle"
+    },
+    {
+      "id": 2,
+      "name": "拍手 Clap",
+      "key": "S3",
+      "gm": 39,
+      "color": "#ffe6a0",
+      "shape": "round"
+    },
+    {
+      "id": 3,
+      "name": "边击 Rim",
+      "key": "S4",
+      "gm": 37,
+      "color": "#ffb0d0",
+      "shape": "star"
+    }
+  ],
+  "notes": []
+}

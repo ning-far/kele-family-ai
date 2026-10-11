@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#ffd6e8" />
+    <title>English Learning Adventure</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  <!-- 国内可访问的镜像：transformers.js 走 jsdelivr，Whisper 模型走 hf-mirror（均非 Google） -->
+  <script type="importmap">
+  {
+    "imports": {
+      "@huggingface/transformers": "https://cdn.jsdelivr.net/npm/@huggingface/transformers@3",
+      "onnxruntime-web": "https://cdn.jsdelivr.net/npm/onnxruntime-web@1/dist/ort.min.js"
+    }
+  }
+  </script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="status-bar" class="status-bar"></div>
+      <main id="screen" class="screen"></main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

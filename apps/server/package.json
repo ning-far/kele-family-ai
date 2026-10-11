@@ -1,0 +1,21 @@
+{
+  "name": "@kele/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/main.ts",
+    "typecheck": "tsc -p tsconfig.json",
+    "build": "esbuild src/main.ts --bundle --platform=node --format=esm --target=node24 --external:pg --outfile=dist/main.mjs",
+    "start": "node dist/main.mjs"
+  },
+  "dependencies": {
+    "@kele/mode-registry": "workspace:*",
+    "@kele/schemas": "workspace:*",
+    "jose": "^6.2.12",
+    "pg": "^8.23.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.23.1"
+  }
+}

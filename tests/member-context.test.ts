@@ -1,0 +1,31 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {createMemberContext} from '../apps/web/src/member-context.ts';
+import {loadAppState,saveAppState,recordRhythmBest,STORAGE_KEY} from '../apps/web/src/storage.ts';
+const child={id:'child',familyId:'family',displayName:'孩子',ageBand:'child' as const};
+const senior={id:'senior',familyId:'family',displayName:'长辈',ageBand:'senior' as const};
+test('guest, members and different accounts retain isolated local results',()=>{
+ const values=new Map<string,string>();const storage={getItem:(key:string)=>values.get(key)??null,setItem:(key:string,value:string)=>{values.set(key,value)}};
+ const context=createMemberContext();
+ saveAppState(recordRhythmBest(loadAppState(storage),'twinkle',110),storage);
+ context.setSession('account-one',[child,senior]);context.select(child.id);
+ const childStore=context.scopedStorage(storage);
+ assert.deepEqual(loadAppState(childStore).rhythm.bestScores,{});
+ saveAppState(recordRhythmBest(loadAppState(childStore),'twinkle',220),childStore);
+ context.select(senior.id);assert.deepEqual(loadAppState(context.scopedStorage(storage)).rhythm.bestScores,{});
+ context.select(child.id);assert.equal(loadAppState(context.scopedStorage(storage)).rhythm.bestScores.twinkle,220);
+ context.setSession('account-two',[child]);context.select(child.id);
+ assert.deepEqual(loadAppState(context.scopedStorage(storage)).rhythm.bestScores,{});
+ context.setSession(null);assert.equal(loadAppState(context.scopedStorage(storage)).rhythm.bestScores.twinkle,110);
+ assert.ok(values.has(STORAGE_KEY));
+});
+test('member change and authorization loss cancel old work; unapproved selection fails closed',()=>{
+ const context=createMemberContext();let changes=0;const unsubscribe=context.subscribe(()=>changes++);
+ context.setSession('account',[child,senior]);const accountSignal=context.getSignal();
+ context.select(child.id);assert.equal(accountSignal.aborted,true);
+ const childSignal=context.getSignal(),revision=context.getSnapshot().revision;
+ context.select(child.id);assert.equal(context.getSnapshot().revision,revision);assert.equal(childSignal.aborted,false);
+ assert.throws(()=>context.select('unapproved'),/MEMBER_NOT_AUTHORIZED/);
+ context.setSession('account',[senior]);assert.equal(childSignal.aborted,true);assert.equal(context.getSnapshot().member,null);
+ unsubscribe();const count=changes;context.setSession(null);assert.equal(changes,count);
+});

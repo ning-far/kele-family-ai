@@ -1,0 +1,24 @@
+{
+  "name": "@kele/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node ../../scripts/prepare-original-games.mjs && vite --host 127.0.0.1",
+    "typecheck": "tsc -p tsconfig.json",
+    "build": "node ../../scripts/prepare-original-games.mjs && vite build"
+  },
+  "dependencies": {
+    "@kele/mode-registry": "workspace:*",
+    "@kele/device-protocol": "workspace:*",
+    "@kele/schemas": "workspace:*",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "vite": "7.3.1",
+    "@vitejs/plugin-react": "5.1.4",
+    "@types/react": "18.3.27",
+    "@types/react-dom": "18.3.7"
+  }
+}

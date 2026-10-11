@@ -1,0 +1,30 @@
+{
+  "name": "kele-platform",
+  "version": "0.1.0-preview.1",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.3.4",
+  "engines": {
+    "node": ">=24.21.0 <25"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.tests.json && pnpm -r typecheck",
+    "test": "node --test tests/*.test.ts",
+    "build": "pnpm --filter @kele/web build && pnpm --filter @kele/server build && pnpm --filter @kele/miniprogram build",
+    "verify": "pnpm typecheck && pnpm test && pnpm build",
+    "dev:web": "pnpm --filter @kele/web dev",
+    "dev:server": "pnpm --filter @kele/server dev"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3",
+    "esbuild": "0.28.2"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.21.0",
+      "onFail": "download"
+    }
+  }
+}

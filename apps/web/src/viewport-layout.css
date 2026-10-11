@@ -1,0 +1,105 @@
+/* Layout contract: documents grow naturally; game canvases stay fixed;
+   menus own one scroll region; dialogs scroll independently of the canvas. */
+html { scroll-padding-block: 12px; }
+.play-app main, .original-game { min-width: 0; }
+.original-game iframe { max-width: 100%; }
+body .idiom-reward {
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fixed canvas overlays start with pointer-events:none. The scroll surface
+   itself must be hittable, including the gaps between controls. */
+body[data-layout="game"] .screen-home.active {
+  display: block !important;
+  pointer-events: auto;
+  overflow: auto !important;
+  touch-action: pan-y;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
+}
+body[data-layout="game"] .screen-home .home-inner {
+  margin: 0 auto !important;
+  padding: 20px 12px max(28px, env(safe-area-inset-bottom)) !important;
+  min-height: 100%;
+}
+body[data-layout="game"] .home-tools {
+  display: flex; flex-direction: column; gap: 8px;
+  margin: 12px 0; grid-column: 1 / -1;
+}
+body[data-layout="game"] .home-tools .wireless-panel,
+body[data-layout="game"] .home-tools .drum-history {
+  position: static !important; margin: 0 !important;
+  max-width: 100%; max-height: none; text-align: left;
+}
+body[data-layout="game"] .screen-pause.active,
+body[data-layout="game"] .screen-result.active {
+  display: flex; align-items: flex-start; justify-content: center;
+  overflow: auto; pointer-events: auto; touch-action: pan-y;
+  padding: 12px; -webkit-overflow-scrolling: touch;
+}
+body[data-layout="game"] .screen-pause .panel,
+body[data-layout="game"] .screen-result .panel {
+  position: relative; top: auto; left: auto; transform: none;
+  margin: auto; flex: 0 0 auto; max-width: 100%;
+}
+body[data-layout="game"] .modal { z-index: 80; }
+body[data-layout="game"] .modal.show {
+  display: flex; align-items: center; justify-content: center; padding: 10px;
+}
+body[data-layout="game"] .settings-panel {
+  position: relative; top: auto; left: auto; transform: none;
+  max-height: 100%; overflow: auto; padding-top: 0;
+  -webkit-overflow-scrolling: touch;
+}
+body[data-layout="game"] .settings-head {
+  position: sticky; top: 0; z-index: 3;
+  display: flex; align-items: center; justify-content: space-between;
+  min-height: 60px; background: #1e2252;
+}
+body[data-layout="game"] .settings-head .panel-title { margin: 0; }
+body[data-layout="game"] .settings-close {
+  display: grid; place-items: center; width: 48px; height: 48px;
+  color: #fff; background: #ffffff22; border: 1px solid #ffffff66;
+  border-radius: 50%; font: 28px system-ui;
+}
+body[data-layout="game"].settings-open .home-tools { visibility: hidden; }
+body[data-layout="document"] .overlay {
+  overflow: auto; align-items: flex-start; padding: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+body[data-layout="document"] .overlay-card {
+  margin: auto; flex: 0 0 auto; max-width: 100%;
+}
+@media screen {
+  .play-app:has(.original-game) {
+    height: 100vh; height: 100dvh;
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .play-app:has(.original-game) .play-header,
+  .play-app:has(.original-game) footer { display: none; }
+  .play-app:has(.original-game) main {
+    display: flex; flex-direction: column; flex: 1;
+    width: 100%; min-height: 0; margin: 0;
+    padding: 6px max(8px,env(safe-area-inset-right)) max(6px,env(safe-area-inset-bottom)) max(8px,env(safe-area-inset-left));
+  }
+  .play-app .play-back { flex: 0 0 auto; align-self: flex-start; }
+  .play-app .original-game {
+    flex: 1; min-height: 0; display: flex; flex-direction: column;
+  }
+  .play-app .original-toolbar { flex: 0 0 auto; height: auto; min-height: 40px; }
+  .play-app .original-toolbar h1 { font-size: 16px; margin: 0; }
+  .play-app .original-hint { display: none; }
+  .play-app .original-game.original-rhythm iframe,
+  .play-app .original-game.original-english iframe {
+    flex: 1; height: 0; min-height: 0; width: 100%;
+  }
+  body[data-layout="game"] .diff-label { font-size: 16px; }
+  body[data-layout="game"] .home-tools .wireless-panel,
+  body[data-layout="game"] .home-tools .drum-history { display: block !important; }
+  body[data-layout="document"] .card { min-width: 0; }
+  body[data-layout="document"] .row { flex-wrap: wrap; }
+}

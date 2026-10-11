@@ -1,0 +1,31 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {recordResult,newWords,hardWords,clearAll,getEntry,addManual} from '../src/content/vocabStore.js';
+const values=new Map();
+globalThis.localStorage={getItem:k=>values.get(k)||null,setItem:(k,v)=>values.set(k,v)};
+test('wrong target is collected, repeated failures become hard, consecutive review clears and later mistake reopens',()=>{
+ clearAll();
+ recordResult('apple','苹果',false);
+ assert.equal(newWords()[0].word,'apple');
+ assert.equal(hardWords().length,0);
+ recordResult('apple','苹果',false);
+ assert.equal(hardWords().length,1);
+ recordResult('apple','苹果',true);
+ recordResult('apple','苹果',true);
+ recordResult('apple','苹果',false);
+ recordResult('apple','苹果',true);
+ assert.equal(getEntry('apple').mastered,false);
+ recordResult('apple','苹果',true);
+ recordResult('apple','苹果',true);
+ assert.equal(newWords().length,0);
+ assert.equal(hardWords().length,0);
+ recordResult('apple','苹果',false);
+ assert.equal(newWords().length,1);
+ assert.equal(getEntry('apple').mastered,false);
+});
+test('manual addition is not a successful practice attempt',()=>{
+ clearAll();addManual('cat','猫');
+ assert.equal(getEntry('cat').correctCount,0);
+ assert.equal(getEntry('cat').correctStreak,0);
+ assert.equal(newWords().length,1);
+});

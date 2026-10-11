@@ -1,0 +1,14 @@
+{
+  "name": "english-learning",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A cute, child-friendly English learning web app for kindergarten & grade-1 kids, with EasyInput V2.0 dev-board button control.",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "serve": "node server.mjs",
+    "test": "node --test"
+  }
+}

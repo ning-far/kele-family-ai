@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#16204f" />
+    <title>星空小鼓手 · 小星星</title>
+    <!--
+      字体（阶段1B）：已去掉 Google Fonts 的 CDN 外链，改为本地/系统字体。
+      目前用「系统圆体优先」字体栈（见 src/styles.css 的 --font），零外链、离线可用。
+      拿到 OFL 许可的可爱圆体（Baloo 2 / ZCOOL KuaiLe）后，把 woff2 放进 public/fonts/
+      并取消 src/styles.css 里 @font-face 的注释即可本地加载（详见 public/fonts/README.txt）。
+    -->
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game" aria-label="节奏游戏画面"></canvas>
+      <div id="overlay"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

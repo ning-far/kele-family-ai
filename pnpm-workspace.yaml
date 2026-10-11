@@ -1,0 +1,15 @@
+packages:
+  - apps/*
+  - packages/*
+allowBuilds:
+  esbuild: true
+  '@swc/core': true
+  '@tarojs/binding': true
+  '@tarojs/cli': false
+  '@parcel/watcher': false
+  core-js: false
+  core-js-pure: false
+storeDir: '.cache/pnpm-store'
+cacheDir: '.cache/pnpm-cache'
+strictPeerDependencies: false
+

@@ -1,0 +1,722 @@
+{
+  "format": "drumgame-chart/1",
+  "meta": {
+    "title": "小星星",
+    "gear": 2,
+    "difficulty": "normal",
+    "bpm": 84,
+    "beatsPerBar": 4,
+    "stepsPerBar": 16,
+    "audioOffsetMs": 0,
+    "lengthBeats": 96,
+    "source": "remapped from easyinput-beatbox firmware gear2 (pattern.c)"
+  },
+  "lanes": [
+    {
+      "id": 0,
+      "name": "闭镲 CHH",
+      "key": "S1",
+      "gm": 42,
+      "color": "#74e0b8",
+      "shape": "circle"
+    },
+    {
+      "id": 1,
+      "name": "开镲 OHH",
+      "key": "S2",
+      "gm": 46,
+      "color": "#7cc5ff",
+      "shape": "triangle"
+    },
+    {
+      "id": 2,
+      "name": "拍手 Clap",
+      "key": "S3",
+      "gm": 39,
+      "color": "#ffe6a0",
+      "shape": "round"
+    },
+    {
+      "id": 3,
+      "name": "边击 Rim",
+      "key": "S4",
+      "gm": 37,
+      "color": "#ffb0d0",
+      "shape": "star"
+    }
+  ],
+  "notes": [
+    {
+      "beat": 0,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 1,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 2,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 3,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 4,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 5,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 6,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 7,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 8,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 9,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 10,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 11,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 12,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 13,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 14,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 15,
+      "lanes": [
+        1
+      ],
+      "vel": 120
+    },
+    {
+      "beat": 16,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 17,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 18,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 19,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 20,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 21,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 22,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 23,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 24,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 25,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 26,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 27,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 28,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 29,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 30,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 31,
+      "lanes": [
+        1
+      ],
+      "vel": 120
+    },
+    {
+      "beat": 32,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 33,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 34,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 35,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 36,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 37,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 38,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 39,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 40,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 41,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 42,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 43,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 44,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 45,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 46,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 47,
+      "lanes": [
+        1
+      ],
+      "vel": 120
+    },
+    {
+      "beat": 48,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 49,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 50,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 51,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 52,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 53,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 54,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 55,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 56,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 57,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 58,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 59,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 60,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 61,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 62,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 63,
+      "lanes": [
+        1
+      ],
+      "vel": 120
+    },
+    {
+      "beat": 64,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 65,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 66,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 67,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 68,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 69,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 70,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 71,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 72,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 73,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 74,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 75,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 76,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 77,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 78,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 79,
+      "lanes": [
+        1
+      ],
+      "vel": 120
+    },
+    {
+      "beat": 80,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 81,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 82,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 83,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 84,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 85,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 86,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 87,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 88,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 89,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 90,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 91,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 92,
+      "lanes": [
+        3
+      ],
+      "vel": 112
+    },
+    {
+      "beat": 93,
+      "lanes": [
+        2
+      ],
+      "vel": 92
+    },
+    {
+      "beat": 94,
+      "lanes": [
+        3
+      ],
+      "vel": 100
+    },
+    {
+      "beat": 95,
+      "lanes": [
+        1
+      ],
+      "vel": 120
+    }
+  ]
+}
